@@ -869,3 +869,43 @@ com.netease.cloud.ClientException: 密码有误，请重新输入！
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
 20:17:45.433 [http-nio-8080-exec-4] INFO  o.s.LoggerFactory - 用户：null 登陆中
+20:50:59.658 [Thread-9] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6239aba6: startup date [Wed Jul 18 20:17:15 CST 2018]; root of context hierarchy
+20:50:59.674 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+20:50:59.675 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+20:50:59.677 [Thread-9] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:50:59.683 [Thread-9] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:51:07.136 [main] INFO  c.w.m.MyCalendarServerApplication - Starting MyCalendarServerApplication on NetEasedeiMac-2.local with PID 2519 (started by netease in /Users/netease/myProject/spring boot/myCalendar-server)
+20:51:07.139 [main] INFO  c.w.m.MyCalendarServerApplication - The following profiles are active: localization
+20:51:07.178 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1fb669c3: startup date [Wed Jul 18 20:51:07 CST 2018]; root of context hierarchy
+20:51:08.124 [main] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+20:51:08.135 [main] INFO  o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+20:51:08.142 [main] INFO  o.a.c.c.StandardService - Starting service [Tomcat]
+20:51:08.143 [main] INFO  o.a.c.c.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+20:51:08.146 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/netease/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+20:51:08.220 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+20:51:08.220 [localhost-startStop-1] INFO  o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 1042 ms
+20:51:08.311 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+20:51:08.315 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+20:51:08.315 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+20:51:08.315 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+20:51:08.315 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+20:51:08.645 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:51:08.894 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1fb669c3: startup date [Wed Jul 18 20:51:07 CST 2018]; root of context hierarchy
+20:51:08.950 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/login],methods=[POST]}" onto public com.wuji.myCalendarServer.dto.ResponseResult com.wuji.myCalendarServer.controller.LoginController.login(javax.servlet.http.HttpServletRequest,com.wuji.myCalendarServer.bean.User,org.springframework.validation.BindingResult)
+20:51:08.953 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+20:51:08.953 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+20:51:08.978 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:51:08.978 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+20:51:09.193 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+20:51:09.194 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Bean with name 'dataSource' has been autodetected for JMX exposure
+20:51:09.199 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+20:51:09.208 [main] INFO  o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+20:51:09.226 [main] INFO  o.a.t.u.n.NioSelectorPool - Using a shared selector for servlet write/read
+20:51:09.241 [main] INFO  o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+20:51:09.245 [main] INFO  c.w.m.MyCalendarServerApplication - Started MyCalendarServerApplication in 2.461 seconds (JVM running for 3.32)
+20:51:24.504 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+20:51:24.519 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+20:51:24.546 [http-nio-8080-exec-1] INFO  o.s.w.s.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+20:51:24.625 [http-nio-8080-exec-1] INFO  o.s.LoggerFactory - 用户：null 登陆中
+20:51:24.725 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - HikariPool-1 - Starting...
+20:51:24.976 [http-nio-8080-exec-1] INFO  c.z.h.HikariDataSource - HikariPool-1 - Start completed.

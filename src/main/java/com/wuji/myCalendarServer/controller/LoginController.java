@@ -1,10 +1,12 @@
 package com.wuji.myCalendarServer.controller;
 
 import com.wuji.myCalendarServer.bean.User;
+import com.wuji.myCalendarServer.dto.ResponseResult;
 import com.wuji.myCalendarServer.service.LoginService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping(value = "/api")
-public class LoginController {
+public class LoginController extends BaseController{
 
     @Autowired
     private LoginService loginService;
@@ -27,8 +29,14 @@ public class LoginController {
     Logger logger = LoggerFactory.getLogger(LoggerFactory.class);
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public boolean login(HttpServletRequest request, @RequestBody User user) {
+    public ResponseResult login(HttpServletRequest request, @RequestBody User user, BindingResult bindingResult) {
         logger.info("用户：" + user.getUserName() + " 登陆中");
-        return loginService.login(user);
+        ResultDelegate delegate = new ResultDelegate() {
+            @Override
+            public Object getResultObject() throws Exception {
+                return loginService.login(user);
+            }
+        };
+        return getResponseResult(request, delegate, bindingResult);
     }
 }
