@@ -25,4 +25,4 @@
 /.nb-gradle/
 
 ### 本地不必提交到git的文件 ###
-logs
+logs/
