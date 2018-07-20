@@ -30,7 +30,7 @@ public class LoginController extends BaseController{
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ResponseResult login(HttpServletRequest request, @RequestBody User user, BindingResult bindingResult) {
-        logger.info("用户：" + user.getUserName() + " 登陆中");
+        logger.info("用户：" + user.getEmail() + " 登陆中");
         ResultDelegate delegate = new ResultDelegate() {
             @Override
             public Object getResultObject() throws Exception {
@@ -38,5 +38,16 @@ public class LoginController extends BaseController{
             }
         };
         return getResponseResult(request, delegate, bindingResult);
+    }
+
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    public ResponseResult test(HttpServletRequest request) {
+        ResultDelegate delegate = new ResultDelegate() {
+            @Override
+            public Object getResultObject() throws Exception {
+                return "server ....  test ...";
+            }
+        };
+        return getResponseResult(request, delegate);
     }
 }
